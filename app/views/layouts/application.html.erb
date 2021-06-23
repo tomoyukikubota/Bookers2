@@ -46,7 +46,7 @@
             </li>
 
             <li>
-              <%= link_to " About", '/homes', class: "fas fa-link nav-link text-light" %>
+              <%= link_to " About", home_about_path, class: "fas fa-link nav-link text-light" %>
             </li>
 
             <li>
@@ -62,12 +62,10 @@
       </nav>
     </header>
     <main>
-      <p class="notice"></p>
+      <p class="notice"><%= flash[:notice] %></p>
       <div class="container">
         <div class="row">
-          <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
           <%= yield %>
-          </div>
         </div>
       </div>
     </main>
