@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'relationships/create'
-  get 'relationships/destroy'
+
   devise_for :users
   root to: 'homes#top'
   get 'home/about' => 'homes#about'
@@ -14,6 +13,8 @@ Rails.application.routes.draw do
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
     # ——————————— ここまでネストさせる ———————————
+    get 'relationships/create'
+    get 'relationships/destroy'
   end
 
 end
